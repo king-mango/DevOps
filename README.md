@@ -10,7 +10,15 @@
 
 ## API Endpoints
 
-### hello-world
-URL: `http://127.0.0.1:8000/hello-world`
+### hello-world  
+URL: `http://127.0.0.1:8000/hello-world/hello`  
+Method: `POST`  
+Content-Type: `application/json`  
+Request Body: (Example): `{"name": "Timothy"}`  
+Expected Response: `"Hello, Timothy!"`
 
-METHOD: `GET`
+### test (Use for testing the hello-word endpoint)  
+URL: `http://127.0.0.1:8000/hello-world/hello`  
+Method: `GET`  
+Expected Response: `"OK"`
+
