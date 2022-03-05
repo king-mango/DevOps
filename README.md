@@ -18,7 +18,7 @@ Request Body: (Example): `{"name": "Timothy"}`
 Expected Response: `"Hello, Timothy!"`
 
 ### test (Use for testing the hello-word endpoint)  
-URL: `http://127.0.0.1:8000/hello-world/hello`  
+URL: `http://127.0.0.1:8000/hello-world/test`  
 Method: `GET`  
 Expected Response: `"OK"`
 
