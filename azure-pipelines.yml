@@ -10,12 +10,13 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python37:
+    Python38:
       PYTHON_VERSION: '3.8'
   maxParallel: 1
 
 steps:
 - task: UsePythonVersion@0
+  displayName: 'Set python version'
   inputs:
     versionSpec: '$(PYTHON_VERSION)'
     architecture: 'x64'
@@ -48,6 +49,7 @@ steps:
   displayName: 'Run tests'
 
 - task: PublishTestResults@2
+  displayName: 'Publish Test Results'
   inputs:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
