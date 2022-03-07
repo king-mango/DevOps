@@ -11,7 +11,7 @@ pool:
 strategy:
   matrix:
     Python37:
-      PYTHON_VERSION: '3.7'
+      PYTHON_VERSION: '3.8.9'
   maxParallel: 1
 
 steps:
