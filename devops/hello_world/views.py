@@ -1,13 +1,17 @@
+from urllib import response
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
+import vcr
+from unittest import TestCase
 # Create your views here.
 
 class test(APIView):
+    @vcr.use_cassette('fixtures/cassettes/test.yaml')
     def get(self, request, *args, **kwargs):
+        TestCase.assertEqual("ok",status.HTTP_200_OK)
         return Response("OK", status=status.HTTP_200_OK)
 
 
