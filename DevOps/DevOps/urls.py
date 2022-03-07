@@ -20,3 +20,4 @@ urlpatterns = [
     path('HelloWorld',include('DevOps.HelloWorld.urls')),
     path('admin/', admin.site.urls),
 ]
+
