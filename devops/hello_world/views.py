@@ -9,10 +9,9 @@ from unittest import TestCase
 # Create your views here.
 
 class test(APIView):
-    @vcr.use_cassette('fixtures/cassettes/test.yaml')
+   
     def get(self, request, *args, **kwargs):
-        TestCase.assertEqual("ok",status.HTTP_200_OK)
-        return Response("OK", status=status.HTTP_200_OK)
+        return Response("OKAY", status=status.HTTP_200_OK)
 
 
 class hello(APIView):
